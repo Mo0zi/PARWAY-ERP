@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <label class="form-label small fw-bold">Password</label>
       <div class="input-group">
         <span class="input-group-text bg-light"><i class="fa-solid fa-lock text-muted"></i></span>
-        <input type="password" name="password" class="form-control" placeholder="Enter password" value="SHAHBAZ@000" required>
+        <input type="password" name="password" class="form-control" placeholder="Enter password" required autocomplete="current-password">
       </div>
     </div>
 
