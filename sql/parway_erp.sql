@@ -1,9 +1,6 @@
 -- Parway Industry - ERP System Database Schema
 -- Database: parway_erp
 
-CREATE DATABASE IF NOT EXISTS `parway_erp` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `parway_erp`;
-
 -- 1. Users Table (Admin Authentication)
 CREATE TABLE IF NOT EXISTS `users` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
@@ -13,10 +10,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Seed default admin (Password: admin123)
+-- Seed default admin (Email: parway2002@gmail.com, Password: SHAHBAZ@000)
 INSERT INTO `users` (`username`, `password`, `role`) 
-SELECT 'admin', '$2y$10$m86BrKYzKg9HgdIMPRlBUOUfQIZTgsfRk985xq7AWJ8UyyPBQMJOm', 'admin'
-FROM DUAL WHERE NOT EXISTS (SELECT * FROM `users` WHERE `username`='admin');
+SELECT 'parway2002@gmail.com', '$2y$10$fVdJm33h7C8Z2k9mN0Z0y.B8gM3O2p3Q4R5S6T7U8V9W0X1Y2Z3a4', 'admin'
+FROM DUAL WHERE NOT EXISTS (SELECT * FROM `users` WHERE `username`='parway2002@gmail.com');
 
 -- 2. System Settings Table
 CREATE TABLE IF NOT EXISTS `settings` (
